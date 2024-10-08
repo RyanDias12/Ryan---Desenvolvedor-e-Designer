@@ -1,0 +1,38 @@
+.header {
+  max-width: 1200px; /* tamanho maximo da pagina */
+  padding: 40px 20px; /* desgrudar os itens da borda da pagina*/
+  margin: 0 auto; /* alinhamento ao centro dos itens*/
+  display: flex;
+  justify-content: space-between; /* cada item do header em lados opostos da pagina */
+  align-items: center;
+ 
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap; /*para quebrar o menu se caso a pagina diminuir de tamanho */
+  gap: 10px; /*espaçamento entre o menu*/
+  justify-content: center; /* sempre quando os itens qubrar ser justificado ao centro */
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3; /* altura de linha do (a) */
+  padding: 10px 20px; /* aumento da area do click */
+  text-decoration: none;
+  color: #141414;
+  display: block; /* para poder pegar o valores corretamente do padding acima  */
+}
+
+@media (max-width: 800px) {
+  /* parte responsiva do menu */
+  .header {
+    flex-direction: column; /* para quando o site diminuir em 800px o liks de acesso ir para debaixo da logo do site */
+    gap: 40px;
+    padding: 20px; /* distacia da parte superior da borda da pagina */
+  }
+  .header a {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+}
